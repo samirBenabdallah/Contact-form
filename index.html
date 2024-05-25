@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/media.css" />
+  </head>
+  <body class="center-flex">
+    <main>
+      <h1>Contact Us</h1>
+      <form>
+        <div>
+          <label for="first">First Name <span>*</span> </label>
+          <input class="border-hover" type="text" id="first" />
+        </div>
+        <div>
+          <label for="last">Last Name <span>*</span> </label>
+          <input class="border-hover" type="text" id="last" />
+        </div>
+        <div class="email">
+          <label for="email">Email Address <span>*</span> </label>
+          <input class="border-hover" type="email" id="email" />
+        </div>
+        <p>Query Type <span>*</span></p>
+        <div class="radiobox border-hover flex-ac">
+          <input type="radio" name="query" id="General" />
+          <label for="General">General Enquiry </label>
+        </div>
+        <div class="radiobox border-hover flex-ac">
+          <input type="radio" name="query" id="Support" />
+          <label for="Support">Support Request </label>
+        </div>
+        <div class="message">
+          <label for="message">Message <span>*</span> </label>
+          <textarea
+            class="border-hover"
+            id="message"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="ckeckbox flex-ac">
+          <input type="checkbox" id="chekbox" />
+          <label for="chekbox">
+            I consent to being contacted by the team <span>*</span>
+          </label>
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    </main>
+    <article>
+      <div>
+        <img src="./assets/images/icon-success-check.svg" alt="" />
+        <h3>Message Sent!</h3>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </article>
+    <script src="src/action.js"></script>
+  </body>
+</html>

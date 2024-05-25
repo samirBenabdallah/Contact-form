@@ -1,0 +1,168 @@
+:root {
+  --Green-200/* (lighter) */: hsl(148, 38%, 91%);
+  --Green-600/* (medium) */: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 56%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-500/* (medium) */: hsl(186, 15%, 59%);
+  --Grey-900/* (darker) */: hsl(187, 24%, 22%);
+}
+@font-face {
+  font-family: font-regular;
+  src: url("../assets/fonts/static/Karla-Regular.ttf");
+}
+@font-face {
+  font-family: font-bold;
+  src: url("../assets/fonts/static/Karla-Bold.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: font-regular;
+  outline: none;
+  border: none;
+}
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-ac {
+  display: flex;
+  align-items: center;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--Green-200);
+  article {
+    display: none;
+  }
+}
+main {
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 20px;
+}
+.border-hover {
+  border: 1px solid var(--Grey-500);
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    transition: 0.4s;
+    border-color: var(--Green-600);
+  }
+}
+span {
+  color: var(--Green-600);
+  font-size: large;
+}
+label {
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: var(--Grey-900);
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 7px;
+}
+h1 {
+  font-family: font-bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+form {
+  display: grid;
+  grid-gap: 15px;
+  .message {
+    textarea {
+      height: 60px;
+    }
+  }
+  .radiobox {
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 15px;
+    input {
+      margin-right: 10px;
+    }
+  }
+  .ckeckbox {
+    input {
+      margin-right: 10px;
+    }
+  }
+  input[type="submit"] {
+    background-color: var(--Green-600);
+    height: 40px;
+    color: var(--White);
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}
+.error {
+  position: relative;
+  &::before {
+    content: "this feild is required";
+    position: absolute;
+    bottom: 0;
+    color: red;
+    transform: translateY(100%);
+  }
+}
+.checkbox-error {
+  position: relative;
+  &::before {
+    content: "To submit this form, please consent to being contacted";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: red;
+    transform: translateY(100%);
+  }
+}
+body.submit {
+  position: relative;
+  article {
+    width: 320px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: var(--Green-600);
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--Green-200);
+    padding-left: 20px;
+    div {
+      display: flex;
+      width: 100%;
+      margin-bottom: 20px;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
